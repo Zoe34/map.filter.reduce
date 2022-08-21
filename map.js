@@ -24,8 +24,8 @@ const simple = nums.map(multiplyByTwo);
 console.log(simple);
 // Simplified w/ map()
 
-
-
+const arrow = nums.map(num => num * 2);
+console.log(arrow);
 // Simplfied w/ map() + arrow function
 
 
@@ -38,7 +38,7 @@ const students = [
     skill: 'JavaScript'
   },
   {
-    id: 2,
+    id: 2, 
     name: 'Ariel',
     profession: 'Developer',
     skill: 'HTML'
@@ -50,3 +50,13 @@ const students = [
     skill: 'CSS'
   },
 ];
+
+
+for (let student of students){
+  console.log(student.name);
+  console.log(student.id);
+
+}
+
+const newArrays = students.map(student => [student.name + ', ' + student.id]);
+console.log(newArrays);
